@@ -1,0 +1,147 @@
+.advantages {
+  margin-bottom: $offset;
+
+  @media (max-width:768px) {
+    & {
+      margin-bottom: $smail-offset;
+    }
+  }
+
+  &__top {
+    padding-top: $offset;
+    padding-bottom: $offset + 50;
+    background-color: #FBF6F1;
+
+    @media (max-width:768px) {
+      & {
+        padding-top: $smail-offset;
+        padding-bottom: $smail-offset;
+      }
+    }
+
+    & .container {
+      @extend .flex;
+      align-items: flex-start;
+
+      @media (max-width:1092px) {
+        & {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__title {
+    max-width: 500px;
+    @extend .text-default;
+    @extend .title-default;
+    transition-delay: .5s;
+    opacity: 0;
+    transition: all ease 1s;
+
+    &.element-show {
+      transition-delay: .5s;
+      opacity: 1;
+      transition: all ease 1s;
+    }
+  }
+
+  &__text {
+    width: 500px;
+    @extend .text-default;
+    transform: translateY(100px);
+    transition-delay: .5s;
+    opacity: 0;
+    transition: all ease 1s;
+
+    &.element-show {
+      transition-delay: .8s;
+      transform: translateY(0px);
+      opacity: 1;
+      transition: all ease 1s;
+    }
+
+    @media (max-width:660px) {
+      & {
+        max-width: 350px;
+        margin: 0 auto
+      }
+    }
+  }
+
+  &__prewie {
+    @media (max-width:1092px) {
+      & {
+        order: 1;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__content {
+    @extend .flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: fit-content;
+
+    @media (max-width:1092px) {
+      & {
+        order: 2;
+      }
+    }
+
+    @media (max-width:568px) {
+      & {
+        align-items: center;
+      }
+    }
+  }
+
+  &__img {
+    transition-delay: .5s;
+    opacity: 0;
+    transition: all ease 1s;
+
+    &.element-show {
+      opacity: 1;
+      transition: all ease 1s;
+    }
+  }
+
+  &__subscr {
+    max-width: 320px;
+    padding-left: 70px;
+    margin-bottom: 85px;
+    @extend .text-default;
+    font-size: 22px;
+    background-image: url(../images/icon/book.svg);
+    background-position: top left;
+    background-size: 10%;
+    background-repeat: no-repeat;
+
+    @media (max-width:1092px) {
+      & {
+        margin-bottom: 35px;
+      }
+    }
+
+    @media (max-width:568px) {
+      & {
+        font-size: 14px;
+        max-width: 150px;
+        padding-left: 40px;
+      }
+    }
+  }
+
+  &__bottom {
+    padding-top: $offset;
+  }
+
+  &__descr {
+    @extend .text-default;
+    text-align: center;
+  }
+}

@@ -1,0 +1,174 @@
+.hero {
+  padding-top: $offset;
+  margin-bottom: $offset;
+
+  @media (max-width:768px) {
+    & {
+      padding-top: $smail-offset;
+      margin-bottom: $smail-offset;
+    }
+  }
+
+  &__prewie {
+    @extend .flex;
+    align-items: flex-start;
+    margin-bottom: $offset;
+
+    @media (max-width:1092px) {
+      & {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width:768px) {
+      & {
+        margin-bottom: $smail-offset;
+      }
+    }
+  }
+
+  &__img {
+    @media (max-width:1092px) {
+      & {
+        order: 2;
+      }
+    }
+  }
+
+  &__content {
+    @media (max-width:1092px) {
+      & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        order: 1;
+      }
+    }
+
+    @media (max-width:568px) {
+      & {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 470px;
+    @extend .text-default;
+    font-weight: bold;
+    font-size: 80px;
+
+    @media (max-width:568px) {
+      & {
+        max-width: 300px;
+        font-size: 48px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 500px;
+    margin-bottom: 95px;
+    @extend .text-default;
+
+    @media (max-width:1092px) {
+      & {
+        margin-bottom: 35px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__info {
+    @extend .flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__price {
+    display: inline-block;
+    margin-right: 50px;
+    @extend .text-default;
+    font-weight: 700;
+  }
+
+  &__btn {
+    @extend .btn-reset;
+    @extend .btn;
+  }
+
+  &__subscr {
+
+    @extend .flex;
+
+    & span {
+      @extend .text-default;
+      display: inline-block;
+      padding-left: 55px;
+      font-size: 16px;
+      background-size: contain;
+      background-position: left;
+      background-repeat: no-repeat;
+
+      @media (max-width:768px) {
+        & {
+          padding-left: 30px;
+        }
+      }
+
+      @media (max-width:660px) {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+
+      @media (max-width:600px) {
+        &:not(:last-child) {
+          margin-right: 0px;
+        }
+
+        &:first-child {
+          margin-right: 60px;
+        }
+      }
+
+      @media (max-width:452px) {
+        &:first-child {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    & span:nth-child(1) {
+      background-image: url(../images/icon/waranty.svg);
+    }
+
+    & span:nth-child(2) {
+      background-image: url(../images/icon/check.svg);
+    }
+
+    & span:nth-child(3) {
+      background-image: url(../images/icon/box.svg);
+    }
+
+    @media (max-width:660px) {
+      & {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      & span:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width:452px) {
+      & {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

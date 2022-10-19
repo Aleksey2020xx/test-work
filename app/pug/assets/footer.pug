@@ -1,0 +1,37 @@
+footer.footer
+  .container 
+    .footer__content-left 
+      h3.footer__title О компании
+      ul.footer__list 
+        each value in ['Отследить заказ', 'Новости', 'Технологии', 'База знаний', 'Поддержка', 'Сервисный центр', 'Где купить', 'Самовывоз', 'PocketBook Cloud']
+          li.footer__item
+            a.footer__link(href="#")= value 
+    .footer__content-right
+      h3.footer__title Информация
+      ul.footer__list 
+        each value in ['Условия использования сайта', 'Публичная оферта сайта', 'Политика конфиденциальности', 'Условия использования ПО', 'Гарантийные обязательства', 'Оплата и доставка', 'Осторожно, мошенники!']
+          li.footer__item
+            a.footer__link(href="#")= value 
+    address.footer__address 
+      h3.footer__title.footer__title-larg
+        a(href="tel:+78005553427") 8 800 555 34 27
+      ul.footer__list 
+        each key, value in {'Режим работы: ': 'Понедельник-пятница, с 10:00 до 19:00', 'Юр.адрес: ': 'Москва, 115184, Озерковский пер. д. 1/18', 'Электронная почта: ': 'info@pocketbook-int.ru', 'Интернет магазин:': '8 800 555 34 27'}
+          li.footer__item 
+            h4.footer__sub-title= value 
+            a.footer__link(href="#")= key 
+        li.footer__item Звонок по России бесплатный
+      .footer__group 
+        a.footer__link-icon(href="#")
+        a.footer__link-icon(href="#")
+
+
+ 
+
+
+
+
+
+
+
+

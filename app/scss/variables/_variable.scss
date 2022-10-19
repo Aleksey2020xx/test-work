@@ -1,0 +1,82 @@
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('SegoeUI.eot');
+	src: local('Segoe UI'), local('SegoeUI'),
+		url('SegoeUI.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Segoe UI';
+	src: url('SegoeUI-Bold.eot');
+	src: local('Segoe UI Bold'), local('SegoeUI-Bold'),
+		url('SegoeUI-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+$offset: 100px;
+$smail-offset: 50px;
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text-default {
+  color: #0A0C0A;
+  font-size: 32px;
+  line-height: 120%;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: normal;
+
+  @media (max-width:768px) {
+    & {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width:492px) {
+    & {
+      font-size: 16px;
+    }
+  }
+}
+
+a {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: normal;
+}
+
+.title-default {
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+
+  @media (max-width:768px) {
+    & {
+      font-size: 36px;
+    }
+  }
+
+  @media (max-width:568px) {
+    & {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width:492px) {
+    & {
+      font-size: 28px;
+    }
+  }
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

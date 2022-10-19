@@ -1,0 +1,52 @@
+@import "./variables/btn";
+@import "./variables/container";
+@import "./variables/variable";
+@import "./variables/animation";
+
+html, body {
+  min-width: 360px;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  @media (max-width:568px) {
+    & {
+      max-height: 200px;
+    }
+  }
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+.container {
+  @include container(70px)
+}
+
+@media (max-width:768px) {
+  .container {
+    @include container(50px)
+  }
+}
+
+@media (max-width:568px) {
+  .container {
+    @include container(15px)
+  }
+}
+
+@import "./assets/header";
+@import "./assets/hero";
+@import "./assets/usability";
+@import "./assets/scope";
+@import "./assets/advantages";
+@import "./assets/parameter";
+@import "./assets/model";
+@import "./assets/about";
+@import "./assets/footer";
+@import "./assets/sub-footer";

@@ -1,0 +1,7 @@
+@mixin container ($padding-offset) {
+  max-width: 1240px;
+  padding-left: $padding-offset;
+  padding-right: $padding-offset;
+  margin: 0 auto;
+  box-sizing: border-box;
+}

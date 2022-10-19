@@ -1,0 +1,45 @@
+@import "./animation";
+
+.btn-reset {
+  padding: 0;
+  background-color: transparent;
+  outline: 1px solid transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn {
+  @include animation-hover;
+  padding: 15px 35px;
+  color: #fff;
+  background-color: #5887DA;
+  border-radius: 5px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: normal;
+
+  &:hover {
+    @include animation-hover;
+    border: 1px solid #5887DA;
+    background-color: #fff;
+    color: #5887DA;
+  }
+
+  &:focus {
+    @include animation-hover;
+    border: 1px solid #5887DA;
+    background-color: #fff;
+    color: #5887DA;
+  }
+
+  @media (max-width:768px) {
+    & {
+      padding: 15px 10px;
+    }
+  }
+
+  @media (max-width:492px) {
+    & {
+      font-size: 12px;
+    }
+  }
+}

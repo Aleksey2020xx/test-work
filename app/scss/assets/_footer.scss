@@ -1,0 +1,133 @@
+.footer {
+  padding-top: 50px;
+  margin-bottom: 30px;
+
+  & .container {
+    @extend .flex;
+
+    @media (max-width:900px) {
+      & {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__address {
+    font-style: normal;
+
+    & .footer__item {
+      @extend .flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    & .footer__item:last-child {
+      color: #00615B;
+      line-height: 30px;
+    }
+
+    & .footer__list {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__sub-title {
+    margin-right: 5px;
+    color: #535759;
+    font-weight: 400;
+    font-family: 'Segoe UI', sans-serif;
+
+    @media (max-width:568px) {
+      & {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__link {
+    @extend .text-default;
+    @include animation-hover;
+    font-size: 16px;
+    line-height: 30px;
+    text-decoration: none;
+
+    &:hover {
+      @include animation-hover;
+      color: #00615B;
+    }
+
+    &:focus {
+      @include animation-hover;
+      color: #00615B;
+    }
+
+    @media (max-width:568px) {
+      & {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__list {
+    @extend .list-reset;
+  }
+
+  @media (max-width:900px) {
+    &__content-left, &__content-right {
+      margin-right: 50px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content-left &__item:last-child a {
+    color: #00615B;
+  }
+
+  &__content-right &__item:last-child a {
+    color: #F54A4A;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    color: #00615B;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+
+    &-larg a {
+      text-decoration: none;
+      color: #00615B;
+      font-weight: bold;
+    }
+
+    @media (max-width:568px) {
+      & {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__group {
+    @extend .flex;
+    justify-content: flex-start;
+  }
+
+  &__link-icon {
+    display: block;
+    width: 120px;
+    height: 35px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__link-icon:nth-child(1) {
+    margin-right: 20px;
+    background-image: url("../images/icon/play-market.svg");
+  }
+
+  &__link-icon:nth-child(2) {
+    background-image: url("../images/icon/app-store.svg");
+  }
+}
